@@ -1,0 +1,30 @@
+<div align="center" class = "p-3 mb-2 bg-dark text-white" style="border: 5px solid rgb(21, 21, 21) !important;">
+    <h1>
+        {{receivedNemo}}
+    </h1>
+</div>
+
+<div class="table-responsive table-dark table-sm table-hover"style="border: 2px solid rgb(21, 21, 21) !important;">
+    <table class="table" *ngIf ="(CurrentlySelectedNemoPriceInfo)" >
+        <thead class="thead-dark2">
+            <tr align="center">
+                <th scope="col">Fecha</th>
+                <th scope="col" align="center">Precio Final</th>
+            </tr>
+        </thead>
+        
+        <tbody *ngFor="let entry of CurrentlySelectedNemoPriceInfo.historicalPrices">
+            <tr>
+                <td align="center"> {{entry.date}} </td>
+                <td align="center"> {{entry.close}} </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+
+<div style="padding-top: 7px; padding-right: 7px;">
+    <div id="chartContainer" style="height: 1150px; width: 100%; "></div>
+</div>
+
+    

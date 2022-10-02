@@ -1,0 +1,33 @@
+
+<body>
+    <header>
+        <div class="jumbotron bg-grey">
+            <h1 class="display-3">Prueba API REST GSG</h1>
+            <p class="lead">Bienvenidos a la Demo - Francisco Valdés - 956814001 - francisco.valvarado97@gmail.com</p>
+            <p class="lead">Por favor seleccionar un Stock de la lista en el Sidebar.</p>
+
+        </div>
+    </header>
+</body>
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <div class="sidebar-header" style="border: 5px solid rgb(21, 21, 21) !important;">
+            <h1 align="center">STOCKS</h1>
+            <app-nemo-names (nemoOut)="RedirectNemoToProductHistory($event)"></app-nemo-names>
+        </div>
+
+
+    </nav>
+
+    
+    <div id="content">
+        <app-nemo-price-information [receivedNemo]="nemoIn"></app-nemo-price-information>
+    </div>
+
+</div>
+
+
+
+

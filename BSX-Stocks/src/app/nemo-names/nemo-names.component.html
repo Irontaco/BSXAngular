@@ -1,0 +1,9 @@
+<div align="center">
+    <div *ngFor="let nemo of nemos">
+        <button class="btn-block btn-dark"
+        (click)="sendNemoFilter(nemo.symbol)">
+            {{nemo.name}}
+        </button>
+    </div>
+</div>
+
